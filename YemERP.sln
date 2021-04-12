@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YemERP.ApplicationLayer", "YemERP.ApplicationLayer\YemERP.ApplicationLayer.csproj", "{19763369-020D-4B19-B4CC-34F1C41EA412}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YemERP.DomainLayer", "YemERP.DomainLayer\YemERP.DomainLayer.csproj", "{A03324D5-67A4-4B6C-A5BF-5EE47CC7AFEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YemERP.InfrastructureLayer", "YemERP.InfrastructureLayer\YemERP.InfrastructureLayer.csproj", "{C9056F74-9178-4990-B916-E604C05C4F0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YemERP.PresentationLayer", "YemERP.PresentationLayer\YemERP.PresentationLayer.csproj", "{B198C3F4-4D9C-449B-A5BF-034E2461B800}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19763369-020D-4B19-B4CC-34F1C41EA412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19763369-020D-4B19-B4CC-34F1C41EA412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19763369-020D-4B19-B4CC-34F1C41EA412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19763369-020D-4B19-B4CC-34F1C41EA412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A03324D5-67A4-4B6C-A5BF-5EE47CC7AFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A03324D5-67A4-4B6C-A5BF-5EE47CC7AFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A03324D5-67A4-4B6C-A5BF-5EE47CC7AFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A03324D5-67A4-4B6C-A5BF-5EE47CC7AFEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9056F74-9178-4990-B916-E604C05C4F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9056F74-9178-4990-B916-E604C05C4F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9056F74-9178-4990-B916-E604C05C4F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9056F74-9178-4990-B916-E604C05C4F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B198C3F4-4D9C-449B-A5BF-034E2461B800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B198C3F4-4D9C-449B-A5BF-034E2461B800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B198C3F4-4D9C-449B-A5BF-034E2461B800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B198C3F4-4D9C-449B-A5BF-034E2461B800}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18064DD5-C529-4BD6-97A7-21310D5F98DC}
+	EndGlobalSection
+EndGlobal
