@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using YemERP.DomainLayer.Entities.Interfaces;
+using YemERP.DomainLayer.Enums;
 
 namespace YemERP.DomainLayer.Entities.Concrete
 {
-    public class Sevkiyat
+    public class Sevkiyat : IBaseEntity
     {
         public string PLAKA { get; set; }
         public string SIPARISNO { get; set; }
@@ -16,6 +18,13 @@ namespace YemERP.DomainLayer.Entities.Concrete
         public bool URETILDI { get; set; }
         public decimal KALANMIKTAR { get; set; }
 
+        private DateTime _createDate = DateTime.Now;
+        public DateTime CreateDate { get => _createDate; set => _createDate = value; }
 
+        public DateTime? UpdateDate { get; set; }
+        public DateTime? DeleteDate { get; set; }
+
+        private Status _status = Status.Active;
+        public Status Status { get => _status; set => _status = value; }
     }
 }
