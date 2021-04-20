@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using YemERP.DomainLayer.Entities.Concrete;
 using YemERP.DomainLayer.Repositories.Interfaces.EntitiyType;
 using YemERP.InfrastructureLayer.Context;
@@ -12,6 +13,7 @@ namespace YemERP.InfrastructureLayer.Repositories.Concrete.EntityType
     {
         public SevkiyatRepository(SevkiyatDbContext context):base(context)
         {
+            
 
         }
     }
