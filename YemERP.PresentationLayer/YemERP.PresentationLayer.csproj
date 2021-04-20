@@ -14,8 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\YemERP.ApplicationLayer\YemERP.ApplicationLayer.csproj" />
-    <ProjectReference Include="..\YemERP.DomainLayer\YemERP.DomainLayer.csproj" />
     <ProjectReference Include="..\YemERP.InfrastructureLayer\YemERP.InfrastructureLayer.csproj" />
   </ItemGroup>
 
