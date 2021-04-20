@@ -17,9 +17,14 @@ namespace YemERP.ApplicationLayer.Services.Concrete
             this._unitOfWork = unıtOfWork;
         }
 
-        public async  Task<IEnumerable<NetsisIsemriTbl>> GetAllSevkiyat()
+        public async  Task<List<NetsisIsemriTbl>> GetAllSevkiyat()
         {
             return await _unitOfWork.sevkiyat.GetAll();
+        }
+
+        //Task<List<NetsisIsemriTbl>> ISevkiyatService.GetAllSevkiyat()
+        //{
+        //    throw new NotImplementedException();
         }
     }
 }

@@ -16,8 +16,9 @@ namespace YemERP.PresentationLayer.Controllers
         }
         public IActionResult SevkiyatListe()
         {
-            
-            return _sevkiyatService.GetAllSevkiyat()
+
+            var result = _sevkiyatService.GetAllSevkiyat();
+            return View(result);
         }
     }
 }
