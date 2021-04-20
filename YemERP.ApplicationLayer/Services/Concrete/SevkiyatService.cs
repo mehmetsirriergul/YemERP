@@ -26,5 +26,5 @@ namespace YemERP.ApplicationLayer.Services.Concrete
         //{
         //    throw new NotImplementedException();
         }
-    }
+    
 }
