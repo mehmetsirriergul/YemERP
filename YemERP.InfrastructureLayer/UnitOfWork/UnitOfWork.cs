@@ -41,6 +41,11 @@ namespace YemERP.InfrastructureLayer.UnitOfWork
             if (disposing) await _context.DisposeAsync();
         }
 
+        public Task ExecuteSqlCommand(string sql, params object[] parameters)
+        {
+            throw new NotImplementedException();
+        }
+
         //public async Task ExecuteSqlCommand(string sql, params object[] parameters) => await _context.Database.ExecuteSqlRawAsync(sql, parameters);
 
 
