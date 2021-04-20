@@ -1,0 +1,48 @@
+﻿@model List<YemERP.DomainLayer.Entities.Concrete.NetsisIsemriTbl>
+@{
+    ViewData["Title"] = "SevkiyatListe";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">DataTable with minimal features & hover style</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example2" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Rendering engine</th>
+                    <th>Browser</th>
+                    <th>Platform(s)</th>
+                    <th>Engine version</th>
+                    <th>CSS grade</th>
+                    <th>CSS grade</th>
+                    <th>CSS grade</th>
+                    <th>CSS grade</th>
+                    <th>CSS grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@item.INCEKEYNO</td>
+                    <td>@item.KALANMIKTAR</td>
+                    <td>@item.KAYITTARIHI</td>
+                    <td>@item.MALNO</td>
+                    <td>@item.MIKTAR</td>
+                    <td>@item.PLAKA</td>
+                    <td>@item.SIPARISNO</td>
+                    <td>@item.SIPSIRANO</td>
+                    <td>@item.URETILDI</td>
+                </tr>
+                }
+                
+            </tbody>
+            
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+

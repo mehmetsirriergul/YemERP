@@ -8,6 +8,6 @@ namespace YemERP.ApplicationLayer.Services.Interfaces
 {
     public interface ISevkiyatService
     {
-        Task<List<NetsisIsemriTbl>> GetAllSevkiyat();
+        List<NetsisIsemriTbl> GetAllSevkiyat();
     }
 }

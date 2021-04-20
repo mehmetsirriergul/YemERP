@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using YemERP.ApplicationLayer.Services.Concrete;
+using YemERP.ApplicationLayer.Services.Interfaces;
 using YemERP.DomainLayer.UnitOfWork.Interfaces;
 using YemERP.InfrastructureLayer.Context;
 using YemERP.InfrastructureLayer.UnitOfWork;
@@ -30,6 +32,7 @@ namespace YemERP.PresentationLayer
             services.AddDbContext<SevkiyatDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             // services.AddDbContext<SevkiyatDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionErp")));
             services.AddScoped<IUnýtOfWork, UnitOfWork>();
+            services.AddScoped<ISevkiyatService, SevkiyatService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
