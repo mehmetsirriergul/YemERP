@@ -12,7 +12,7 @@ using YemERP.InfrastructureLayer.Context;
 
 namespace YemERP.InfrastructureLayer.Repositories.Concrete.Base
 {
-    public abstract class BaseRepository<T> : IRepository<T> where T : class, IBaseEntity
+    public abstract class BaseRepository<T> : IRepository<T> where T : class
     {
         private readonly SevkiyatDbContext _context;
         protected DbSet<T> table;

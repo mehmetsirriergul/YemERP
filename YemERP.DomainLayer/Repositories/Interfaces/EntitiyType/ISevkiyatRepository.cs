@@ -6,7 +6,7 @@ using YemERP.DomainLayer.Repositories.Interfaces.Base;
 
 namespace YemERP.DomainLayer.Repositories.Interfaces.EntitiyType
 {
-    public interface ISevkiyatRepository:IRepository<Sevkiyat>
+    public interface ISevkiyatRepository:IRepository<NetsisIsemriTbl>
     {
     }
 }

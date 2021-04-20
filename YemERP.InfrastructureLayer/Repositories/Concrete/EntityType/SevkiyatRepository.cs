@@ -9,7 +9,7 @@ using YemERP.InfrastructureLayer.Repositories.Concrete.Base;
 
 namespace YemERP.InfrastructureLayer.Repositories.Concrete.EntityType
 {
-    public class SevkiyatRepository:BaseRepository<Sevkiyat>,ISevkiyatRepository
+    public class SevkiyatRepository:BaseRepository<NetsisIsemriTbl>,ISevkiyatRepository
     {
         public SevkiyatRepository(SevkiyatDbContext context):base(context)
         {

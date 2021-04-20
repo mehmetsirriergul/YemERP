@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\YemERP.DomainLayer\YemERP.DomainLayer.csproj" />
-    <ProjectReference Include="..\YemERP.PresentationLayer\YemERP.PresentationLayer.csproj" />
   </ItemGroup>
 
 </Project>
