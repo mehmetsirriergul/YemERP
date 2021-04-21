@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace YemERP.WepApi.Models.Concrete
 {
@@ -11,8 +11,9 @@ namespace YemERP.WepApi.Models.Concrete
         public string MALNO { get; set; }
         public decimal MIKTAR { get; set; }
         public DateTime KAYITTARIHI { get; set; }
-        public int INCEKEYNO { get; set; }
-        public bool URETILDI { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int INCKEYNO { get; set; }
+        public int URETILDI { get; set; }
         public decimal KALANMIKTAR { get; set; }
 
         
