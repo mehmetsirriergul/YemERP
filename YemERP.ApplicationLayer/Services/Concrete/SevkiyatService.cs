@@ -17,12 +17,13 @@ namespace YemERP.ApplicationLayer.Services.Concrete
             this._unitOfWork = unıtOfWork;
         }
 
-        
-
         public List<NetsisIsemriTbl> GetAllSevkiyat()
         {
-            return  _unitOfWork.sevkiyat.GetAll();
+            throw new NotImplementedException();
         }
+
+
+
 
         //Task<List<NetsisIsemriTbl>> ISevkiyatService.GetAllSevkiyat()
         //{

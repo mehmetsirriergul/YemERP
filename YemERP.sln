@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YemERP.ApplicationLayer", "YemERP.ApplicationLayer\YemERP.ApplicationLayer.csproj", "{19763369-020D-4B19-B4CC-34F1C41EA412}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YemERP.ApplicationLayer", "YemERP.ApplicationLayer\YemERP.ApplicationLayer.csproj", "{19763369-020D-4B19-B4CC-34F1C41EA412}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YemERP.DomainLayer", "YemERP.DomainLayer\YemERP.DomainLayer.csproj", "{A03324D5-67A4-4B6C-A5BF-5EE47CC7AFEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YemERP.DomainLayer", "YemERP.DomainLayer\YemERP.DomainLayer.csproj", "{A03324D5-67A4-4B6C-A5BF-5EE47CC7AFEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YemERP.InfrastructureLayer", "YemERP.InfrastructureLayer\YemERP.InfrastructureLayer.csproj", "{C9056F74-9178-4990-B916-E604C05C4F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YemERP.InfrastructureLayer", "YemERP.InfrastructureLayer\YemERP.InfrastructureLayer.csproj", "{C9056F74-9178-4990-B916-E604C05C4F0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YemERP.PresentationLayer", "YemERP.PresentationLayer\YemERP.PresentationLayer.csproj", "{B198C3F4-4D9C-449B-A5BF-034E2461B800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YemERP.PresentationLayer", "YemERP.PresentationLayer\YemERP.PresentationLayer.csproj", "{B198C3F4-4D9C-449B-A5BF-034E2461B800}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YemERP.WepApi", "YemERP.WepApi\YemERP.WepApi.csproj", "{7AEADA49-DB30-47A3-A759-8BD21BB2AE90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B198C3F4-4D9C-449B-A5BF-034E2461B800}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B198C3F4-4D9C-449B-A5BF-034E2461B800}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B198C3F4-4D9C-449B-A5BF-034E2461B800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AEADA49-DB30-47A3-A759-8BD21BB2AE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AEADA49-DB30-47A3-A759-8BD21BB2AE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AEADA49-DB30-47A3-A759-8BD21BB2AE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AEADA49-DB30-47A3-A759-8BD21BB2AE90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
