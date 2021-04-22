@@ -21,7 +21,8 @@ namespace YemERP.WepApi.Controllers
         [HttpGet]
         public List<NetsisIsemriTbl> GetList()
         {
-            return _context.NetsisIsemriTbls.GroupBy(x => x.SIPARISNO).OrderBy(z=>z.)
+            return _context.NetsisIsemriTbls.ToList();
+               
         }
     }
 }
