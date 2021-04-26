@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using YemERP.WepApi.Models.Concrete;
 using YemERP.WepApi.Models.Context;
+using YemERP.WepApi.Models.Repository.Interfaces;
 
 namespace YemERP.WepApi.Controllers
 {
@@ -13,16 +15,18 @@ namespace YemERP.WepApi.Controllers
     [ApiController]
     public class Sevkiyat1Controller : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
-        public Sevkiyat1Controller(ApplicationDbContext applicationDbContext)
+        private readonly ISevkiyat _sevkiyat;
+
+        public Sevkiyat1Controller(ISevkiyat sevkiyat)
         {
-            this._context = applicationDbContext;
+            this._sevkiyat = sevkiyat;
         }
         [HttpGet]
-        public List<NetsisIsemriTbl> GetList()
+        public List<NetsisIsemriTbl> Get()
         {
-            return _context.NetsisIsemriTbls.ToList();
-               
+            return _sevkiyat.GetList();
+
+           
         }
     }
 }

@@ -14,8 +14,8 @@ namespace YemERP.DomainLayer.Entities.Concrete
         public string MALNO { get; set; }
         public decimal MIKTAR { get; set; }
         public DateTime KAYITTARIHI { get; set; }
-        public int INCEKEYNO { get; set; }
-        public bool URETILDI { get; set; }
+        public int INCKEYNO { get; set; }
+        public int URETILDI { get; set; }
         public decimal KALANMIKTAR { get; set; }
 
         
