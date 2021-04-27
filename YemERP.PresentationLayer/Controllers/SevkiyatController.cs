@@ -22,6 +22,7 @@ namespace YemERP.PresentationLayer.Controllers
                 using var request= await httpClient.GetAsync("http://localhost:31106/api/sevkiyat1");
                 string response = await request.Content.ReadAsStringAsync();
                 netsisIsemriTbls = JsonConvert.DeserializeObject<List<NetsisIsemriTbl>>(response);
+
             }
             return View(netsisIsemriTbls);
         }

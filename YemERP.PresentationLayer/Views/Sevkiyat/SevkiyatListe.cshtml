@@ -3,6 +3,11 @@
     ViewData["Title"] = "SevkiyatListe";
 }
 
+
+
+
+
+
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">DataTable with minimal features & hover style</h3>
@@ -12,36 +17,48 @@
         <table id="example2" class="table table-bordered table-hover">
             <thead>
                 <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
-                    <th>CSS grade</th>
-                    <th>CSS grade</th>
-                    <th>CSS grade</th>
-                    <th>CSS grade</th>
+                    <th>KeyNo</th>
+                    <th>Plaka</th>
+                    <th>Tarih</th>
+                    <th>Sipariş No</th>
+                    <th>Yem Kodu</th>
+                    <th>Miktar</th>
+                    <th>Sarım Durumu</th>
+                    <th>Sevk Et</th>
+
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model)
                 {
-                <tr>
-                    <td>@item.INCKEYNO</td>
-                    <td>@item.KALANMIKTAR</td>
-                    <td>@item.KAYITTARIHI</td>
-                    <td>@item.MALNO</td>
-                    <td>@item.MIKTAR</td>
-                    <td>@item.PLAKA</td>
-                    <td>@item.SIPARISNO</td>
-                    <td>@item.URETILDI</td>
-                </tr>
+                    <tr>
+                        <td>@item.INCKEYNO</td>
+                        <td>@item.PLAKA</td>
+                        <td>@item.KAYITTARIHI</td>
+                        <td>@item.SIPARISNO</td>
+                        <td>@item.MALNO</td>
+                        <td>@item.MIKTAR</td>
+                        <td>@item.URETILDI</td>
+                        @if (item.URETILDI == 0)
+                        {
+                            <td><button class="btn btn-block btn-danger">Sevk Et</button></td>
+                        }
+                        else
+                        {
+                            <td><button class="btn btn-block btn-info">Sevk Edildi</button></td>
+                        }
+
+
+                    </tr>
                 }
-                
+
             </tbody>
-            
+
         </table>
     </div>
     <!-- /.card-body -->
 </div>
+
+
+
 

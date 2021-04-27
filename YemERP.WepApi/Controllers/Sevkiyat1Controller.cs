@@ -22,7 +22,7 @@ namespace YemERP.WepApi.Controllers
             this._sevkiyat = sevkiyat;
         }
         [HttpGet]
-        public List<NetsisIsemriTbl> Get()
+        public IEnumerable<NetsisIsemriTbl> Get()
         {
             return _sevkiyat.GetList();
 

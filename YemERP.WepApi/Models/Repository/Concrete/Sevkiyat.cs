@@ -36,8 +36,8 @@ namespace YemERP.WepApi.Models.Repository.Concrete
         {
 
 
-            var result = _ctx.NetsisIsemriTbls.ToList();
-                return result;
+            var result = _ctx.NetsisIsemriTbls.OrderByDescending(x=>x.KAYITTARIHI).Take(200).ToList();
+            return result;
             
         }
 

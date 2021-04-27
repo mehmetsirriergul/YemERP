@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using YemERP.WepApi.Models.Context;
+using YemERP.WepApi.Models.Repository.Concrete;
+using YemERP.WepApi.Models.Repository.Interfaces;
 
 namespace YemERP.WepApi
 {
@@ -28,6 +30,7 @@ namespace YemERP.WepApi
         {
             services.AddControllers();
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<ISevkiyat, Sevkiyat>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
