@@ -43,7 +43,7 @@ namespace YemERP.WepApi.Models.Repository.Concrete
 
         public void Update(NetsisIsemriTbl netsisIsemriTbl)
         {
-            _ctx.NetsisIsemriTbls.Update(netsisIsemriTbl);
+            _ctx.Entry(netsisIsemriTbl).State = EntityState.Modified;
 
             _ctx.SaveChanges();
         }

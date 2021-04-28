@@ -1,0 +1,73 @@
+﻿@model YemERP.DomainLayer.Entities.Concrete.NetsisIsemriTbl
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="row">
+    <div class="col-sm-10">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Edit Sevkiyat</h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="Edit" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="PLAKA"></label>
+                        <input asp-for="PLAKA" class="form-control" />
+                        <span asp-validation-for="PLAKA" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SIPARISNO"></label>
+                        <input asp-for="SIPARISNO" class="form-control" />
+                        <span asp-validation-for="SIPARISNO" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SIPSIRANO"></label>
+                        <input asp-for="SIPSIRANO" class="form-control" />
+                        <span asp-validation-for="SIPSIRANO" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MALNO"></label>
+                        <input asp-for="MALNO" class="form-control" />
+                        <span asp-validation-for="MALNO" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MIKTAR"></label>
+                        <input asp-for="MIKTAR" class="form-control" />
+                        <span asp-validation-for="MIKTAR" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="KALANMIKTAR"></label>
+                        <input asp-for="KALANMIKTAR" class="form-control" />
+                        <span asp-validation-for="KALANMIKTAR" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="KAYITTARIHI"></label>
+                        <input asp-for="KAYITTARIHI" class="form-control" />
+                        <span asp-validation-for="KAYITTARIHI" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="INCKEYNO"></label>
+                        <input asp-for="INCKEYNO" class="form-control" />
+                        <span asp-validation-for="INCKEYNO" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="URETILDI"></label>
+                        <input asp-for="URETILDI" class="form-control" />
+                        <span asp-validation-for="URETILDI" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group float-right">
+                        <button type="submit" value="Create" class="btn btn-primary">Sevkiyatı Düzenle</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <a asp-action="SevkiyatListe">Back To List</a>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -41,11 +41,11 @@
                         <td>@item.URETILDI</td>
                         @if (item.URETILDI == 0)
                         {
-                            <td><button class="btn btn-block btn-danger">Sevk Et</button></td>
+                            <td><a asp-action="Edit" asp-controller="Sevkiyat" asp-route-INCKEYNO="@item.INCKEYNO" class="btn btn-block btn-danger">Sevk Et</a></td>
                         }
                         else
                         {
-                            <td><button class="btn btn-block btn-info">Sevk Edildi</button></td>
+                            <td><a class="btn btn-block btn-info">Sevk Edildi</a></td>
                         }
 
 
