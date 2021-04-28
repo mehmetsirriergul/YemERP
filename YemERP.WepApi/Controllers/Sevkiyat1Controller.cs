@@ -11,6 +11,7 @@ using YemERP.WepApi.Models.Repository.Interfaces;
 
 namespace YemERP.WepApi.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class Sevkiyat1Controller : ControllerBase
@@ -27,6 +28,15 @@ namespace YemERP.WepApi.Controllers
             return _sevkiyat.GetList();
 
            
+        }
+        [HttpPut("{INCKEYNO}")]
+        public void PutSevkiyat(int INCKEYNO, [FromBody] NetsisIsemriTbl netsisIsemriTbl)
+        {
+            
+            
+                _sevkiyat.Update(netsisIsemriTbl);
+            
+            
         }
     }
 }

@@ -43,7 +43,9 @@ namespace YemERP.WepApi.Models.Repository.Concrete
 
         public void Update(NetsisIsemriTbl netsisIsemriTbl)
         {
-            throw new NotImplementedException();
+            _ctx.NetsisIsemriTbls.Update(netsisIsemriTbl);
+
+            _ctx.SaveChanges();
         }
     }
 }

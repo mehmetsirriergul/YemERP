@@ -11,16 +11,21 @@ namespace YemERP.WepApi.Models.Context
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder
-    .Entity<NetsisIsemriTbl>(builder =>
-    {
-        builder.HasNoKey();
-        builder.ToTable("NetsisIsemriTbl");
-    });
-        }
-        public DbSet<NetsisIsemriTbl> NetsisIsemriTbls { get; set; }
+            protected override void OnModelCreating(ModelBuilder modelBuilder)
+            {
+            modelBuilder.Entity<NetsisIsemriTbl>(b =>
+            {
+                // Primary key
+                b.HasKey(uc => uc.INCKEYNO);
+
+                // Maps to the AspNetUserClaims table
+                b.ToTable("NetsisIsemriTbl");
+            });
+            //Configure domain classes using modelBuilder here   
+
+           
+    }
+            public DbSet<NetsisIsemriTbl> NetsisIsemriTbls { get; set; }
        
 
     }
