@@ -30,6 +30,7 @@ namespace YemERP.WepApi
         {
             services.AddControllers();
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddAutoMapper(typeof(Startup));
             services.AddScoped<ISevkiyat, Sevkiyat>();
         }
 

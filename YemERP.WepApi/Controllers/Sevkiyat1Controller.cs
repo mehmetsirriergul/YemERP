@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -17,24 +18,28 @@ namespace YemERP.WepApi.Controllers
     public class Sevkiyat1Controller : ControllerBase
     {
         private readonly ISevkiyat _sevkiyat;
+        private readonly IMapper _mapper;
 
-        public Sevkiyat1Controller(ISevkiyat sevkiyat)
+        public Sevkiyat1Controller(ISevkiyat sevkiyat,IMapper mapper)
         {
             this._sevkiyat = sevkiyat;
+            this._mapper = mapper;
         }
         [HttpGet]
-        public IEnumerable<NetsisIsemriTbl> Get()
+        public async Task<IActionResult> Get()
         {
-            return _sevkiyat.GetList();
+            var sevkiyats= await _sevkiyat.GetList();
+            return 
 
            
         }
-        [HttpPut("{INCKEYNO}")]
-        public void PutSevkiyat(int INCKEYNO, [FromBody] NetsisIsemriTbl netsisIsemriTbl)
+        [HttpPut]
+        public void PutSevkiyat(NetsisIsemriTbl netsisIsemriTbl)
         {
             
             
                 _sevkiyat.Update(netsisIsemriTbl);
+            
             
             
         }

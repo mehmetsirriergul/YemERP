@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using YemERP.WepApi.Models.Concrete;
 
 namespace YemERP.WepApi.Models.Repository.Interfaces
 {
-    public interface ISevkiyat
+    public interface ISevkiyat<TEntity> where TEntity:class
     {
-        string Create(NetsisIsemriTbl netsisIsemriTbl);
-        List<NetsisIsemriTbl> GetList();
-        NetsisIsemriTbl Get(int id);
-        void Update(NetsisIsemriTbl netsisIsemriTbl);
-        void Delete(int id);
+        Task AddAsync(TEntity entity);
+        Task<IEnumerable<TEntity>> GetAllAsync();
+        Task<TEntity> GetByIdAsync(int id);
+        Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate);
+        TEntity Update(TEntity entity);
+        void Remove(TEntity entity);
     }
 }
