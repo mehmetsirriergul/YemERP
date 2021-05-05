@@ -17,10 +17,10 @@ namespace YemERP.WepApi.Controllers
     [ApiController]
     public class Sevkiyat1Controller : ControllerBase
     {
-        private readonly ISevkiyat _sevkiyat;
+        private readonly IRepository _sevkiyat;
         private readonly IMapper _mapper;
 
-        public Sevkiyat1Controller(ISevkiyat sevkiyat,IMapper mapper)
+        public Sevkiyat1Controller(IRepository sevkiyat,IMapper mapper)
         {
             this._sevkiyat = sevkiyat;
             this._mapper = mapper;
