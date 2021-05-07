@@ -48,6 +48,7 @@ namespace YemERP.WepApi.Models.Repository.Concrete
         public TEntity Update(TEntity entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
+           
             return entity;
         }
     }

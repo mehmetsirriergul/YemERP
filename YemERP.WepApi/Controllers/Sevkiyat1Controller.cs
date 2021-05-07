@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using YemERP.WepApi.Models.Concrete;
 using YemERP.WepApi.Models.Context;
+using YemERP.WepApi.Models.DTOs;
 using YemERP.WepApi.Models.Repository.Interfaces;
 
 namespace YemERP.WepApi.Controllers
@@ -29,19 +30,19 @@ namespace YemERP.WepApi.Controllers
         public async Task<IActionResult> Get()
         {
             var sevkiyats = await _sevkiyat.GetAllAsync();
-            return Ok(sevkiyats);
+            return Ok(_mapper.Map<IEnumerable<SevkiyatDTOs>>(sevkiyats));
 
            
         }
         [HttpPut]
-        public void PutSevkiyat(NetsisIsemriTbl netsisIsemriTbl)
+        public IActionResult Update(SevkiyatDTOs sevkiyatDTOs)
         {
+            var sevkiyat = _sevkiyat.Update(_mapper.Map<NetsisIsemriTbl>(sevkiyatDTOs));
+
+            return Ok();
             
             
-                _sevkiyat.Update(netsisIsemriTbl);
-            
-            
-            
+             
         }
     }
 }
