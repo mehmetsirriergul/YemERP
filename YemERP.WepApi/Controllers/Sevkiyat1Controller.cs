@@ -17,10 +17,10 @@ namespace YemERP.WepApi.Controllers
     [ApiController]
     public class Sevkiyat1Controller : ControllerBase
     {
-        private readonly IRepository _sevkiyat;
+        private readonly ISevkiyatRepository _sevkiyat;
         private readonly IMapper _mapper;
 
-        public Sevkiyat1Controller(IRepository sevkiyat,IMapper mapper)
+        public Sevkiyat1Controller(ISevkiyatRepository sevkiyat,IMapper mapper)
         {
             this._sevkiyat = sevkiyat;
             this._mapper = mapper;
@@ -28,8 +28,8 @@ namespace YemERP.WepApi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var sevkiyats= await _sevkiyat.GetList();
-            return 
+            var sevkiyats = await _sevkiyat.GetAllAsync();
+            return Ok(sevkiyats);
 
            
         }

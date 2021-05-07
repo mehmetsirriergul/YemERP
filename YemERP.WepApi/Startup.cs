@@ -31,7 +31,7 @@ namespace YemERP.WepApi
             services.AddControllers();
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAutoMapper(typeof(Startup));
-            services.AddScoped<IRepository, Repository>();
+            services.AddScoped<ISevkiyatRepository, SevkiyatRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
