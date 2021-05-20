@@ -8,10 +8,10 @@ namespace YemERP.WepApi.Models.Service
 {
     public interface IService<TEntity> where TEntity:class
     {
-        Task AddAsync(TEntity entity);
+        Task<TEntity> AddAsync(TEntity entity);
         Task<IEnumerable<TEntity>> GetAllAsync();
         Task<TEntity> GetByIdAsync(int id);
-        IEnumerable<TEntity> Where(Expression<Func<TEntity, bool>> predicate);
+        //Task <IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate);
         TEntity Update(TEntity entity);
         void Remove(TEntity entity);
     }
