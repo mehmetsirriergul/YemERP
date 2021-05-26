@@ -35,9 +35,9 @@ namespace YemERP.WepApi.Models.Repository.Concrete
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<TEntity> GetByIdAsync(int id)
+        public async Task<TEntity> GetByIdAsync(int INCKEYNO)
         {
-            return await _dbSet.FindAsync(id);
+            return await _dbSet.FindAsync(INCKEYNO);
         }
 
         public void Remove(TEntity entity)

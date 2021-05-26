@@ -10,6 +10,7 @@ using YemERP.WepApi.Models.Concrete;
 using YemERP.WepApi.Models.Context;
 using YemERP.WepApi.Models.DTOs;
 using YemERP.WepApi.Models.Repository.Interfaces;
+using YemERP.WepApi.Models.Service;
 
 namespace YemERP.WepApi.Controllers
 {
@@ -18,10 +19,10 @@ namespace YemERP.WepApi.Controllers
     [ApiController]
     public class Sevkiyat1Controller : ControllerBase
     {
-        private readonly ISevkiyatRepository _sevkiyat;
+        private readonly IService<NetsisIsemriTbl> _sevkiyat;
         private readonly IMapper _mapper;
 
-        public Sevkiyat1Controller(ISevkiyatRepository sevkiyat,IMapper mapper)
+        public Sevkiyat1Controller(IService<NetsisIsemriTbl> sevkiyat,IMapper mapper)
         {
             this._sevkiyat = sevkiyat;
             this._mapper = mapper;
@@ -33,6 +34,11 @@ namespace YemERP.WepApi.Controllers
             return Ok(_mapper.Map<IEnumerable<SevkiyatDTOs>>(sevkiyats));
 
            
+        }
+        public async Task<IActionResult>Update(int INCKEYNO)
+        {
+            var sevkiyat = await _sevkiyat.GetByIdAsync(INCKEYNO);
+            return Ok (_mapper.Map<SevkiyatDTOs>(sevkiyat));
         }
         [HttpPut]
         public IActionResult Update(SevkiyatDTOs sevkiyatDTOs)

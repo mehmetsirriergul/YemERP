@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using YemERP.WepApi.Models.Context;
 using YemERP.WepApi.Models.Repository.Concrete;
 using YemERP.WepApi.Models.Repository.Interfaces;
+using YemERP.WepApi.Models.Service;
 using YemERP.WepApi.Models.UnitOfWork;
 
 namespace YemERP.WepApi
@@ -33,6 +34,7 @@ namespace YemERP.WepApi
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
+            services.AddScoped(typeof(IService<>), typeof(Service<>));
             services.AddScoped<ISevkiyatRepository, SevkiyatRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 

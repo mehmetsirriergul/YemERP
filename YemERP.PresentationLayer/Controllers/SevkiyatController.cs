@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,49 +9,45 @@ using System.Text;
 using System.Threading.Tasks;
 using YemERP.ApplicationLayer.Services.Interfaces;
 using YemERP.DomainLayer.Entities.Concrete;
+using YemERP.PresentationLayer.WebApiService;
+using YemERP.WepApi.Models.DTOs;
+using YemERP.WepApi.Models.Service;
 
 namespace YemERP.PresentationLayer.Controllers
 {
     public class SevkiyatController : Controller
     {
-       
-        public async Task<IActionResult> SevkiyatListe()
+        private readonly IService<NetsisIsemriTbl> _sevkiyat;
+        private readonly ApiServices _apiServices;
+        private readonly IMapper _mapper;
+
+        public SevkiyatController(IService<NetsisIsemriTbl> sevkiyat, IMapper mapper)
         {
-            List<NetsisIsemriTbl> netsisIsemriTbls = new List<NetsisIsemriTbl>();
-            using (var httpClient=new HttpClient())
-
-            {
-                using var request= await httpClient.GetAsync("http://localhost:31106/api/sevkiyat1");
-                string response = await request.Content.ReadAsStringAsync();
-                netsisIsemriTbls = JsonConvert.DeserializeObject<List<NetsisIsemriTbl>>(response);
-
-            }
-            return View(netsisIsemriTbls);
+            this._sevkiyat = sevkiyat;
+            this._mapper = mapper;
         }
-        
-        public async Task<ActionResult<NetsisIsemriTbl>>Edit(int INCKEYNO)
+        [HttpGet]
+        public async Task<IActionResult> Get()
         {
-            NetsisIsemriTbl netsisIsemri = new NetsisIsemriTbl();
-            using (var httpClient = new HttpClient())
-            {
-                using var request = await httpClient.GetAsync($"http://localhost:31106/api/sevkiyat1/{INCKEYNO}");
-                string response = await request.Content.ReadAsStringAsync();
-                netsisIsemri = JsonConvert.DeserializeObject<NetsisIsemriTbl>(response);
-            }
-            return View(netsisIsemri);
-        }
+            var sevkiyats = await _sevkiyat.GetAllAsync();
+            return Ok(_mapper.Map<IEnumerable<SevkiyatDTOs>>(sevkiyats));
 
+
+        }
+        public async Task<IActionResult> Update(int INCKEYNO)
+        {
+            var sevkiyat = await _sevkiyat.GetByIdAsync(INCKEYNO);
+            return Ok(_mapper.Map<SevkiyatDTOs>(sevkiyat));
+        }
         [HttpPut]
-        public async Task<ActionResult<NetsisIsemriTbl>> Edit(NetsisIsemriTbl netsisIsemriTbl)
+        public IActionResult Update(SevkiyatDTOs sevkiyatDTOs)
         {
-            
-            using (var httpClient = new HttpClient())
-            {
-                var content = new StringContent(JsonConvert.SerializeObject(netsisIsemriTbl), Encoding.UTF8, "application/json");
-                using var request = await httpClient.PutAsync($"http://localhost:31106/api/sevkiyat1/{netsisIsemriTbl.INCKEYNO}", content);
-                string response = await content.ReadAsStringAsync();
-            }
-            return RedirectToAction("SevkiyatListe");
+            var sevkiyat = _sevkiyat.Update(_mapper.Map<NetsisIsemriTbl>(sevkiyatDTOs));
+
+            return Ok();
+
+
+
         }
     }
 }

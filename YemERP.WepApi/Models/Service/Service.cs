@@ -30,9 +30,9 @@ namespace YemERP.WepApi.Models.Service
             return await _repository.GetAllAsync();
         }
 
-        public async Task<TEntity> GetByIdAsync(int id)
+        public async Task<TEntity> GetByIdAsync(int INCKEYNO)
         {
-            return await _repository.GetByIdAsync(id);
+            return await _repository.GetByIdAsync(INCKEYNO);
         }
 
         public void Remove(TEntity entity)

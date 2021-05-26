@@ -10,7 +10,7 @@ namespace YemERP.WepApi.Models.Service
     {
         Task<TEntity> AddAsync(TEntity entity);
         Task<IEnumerable<TEntity>> GetAllAsync();
-        Task<TEntity> GetByIdAsync(int id);
+        Task<TEntity> GetByIdAsync(int INCKEYNO);
         //Task <IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate);
         TEntity Update(TEntity entity);
         void Remove(TEntity entity);

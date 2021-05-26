@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\YemERP.InfrastructureLayer\YemERP.InfrastructureLayer.csproj" />
+    <ProjectReference Include="..\YemERP.WepApi\YemERP.WepApi.csproj" />
   </ItemGroup>
 
 </Project>
